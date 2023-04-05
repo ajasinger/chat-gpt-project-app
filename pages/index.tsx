@@ -3,8 +3,14 @@ import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import mainImage from '@/assets/images/fab-lentz-mRMQwK513hY-unsplash.jpg'
 import { Form } from 'react-bootstrap'
+import { FormEvent } from 'react'
 
 export default function Home() {
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+
+  }
+
   return (
     <>
       <Head>
