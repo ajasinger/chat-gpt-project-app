@@ -3,9 +3,13 @@ import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import mainImage from '@/assets/images/fab-lentz-mRMQwK513hY-unsplash.jpg'
 import { Button, Form } from 'react-bootstrap'
-import { FormEvent } from 'react'
+import { FormEvent, useState } from 'react'
 
 export default function Home() {
+
+  const [quote, setQuote] = useState("");
+  const [quoteLoading, setQuoteLoading] = useState(false);
+  const [quoteLoadingError, setQuoteLoadingError] = useState(false);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
 
