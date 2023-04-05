@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import mainImage from '@/assets/images/fab-lentz-mRMQwK513hY-unsplash.jpg'
+import { Form } from 'react-bootstrap'
 
 export default function Home() {
   return (
@@ -25,6 +26,8 @@ export default function Home() {
           className={styles.mainImage}
           />
         </div>
+        <Form onSubmit={handleSubmit} className={styles.inputForm}>
+        </Form>
       </main>
     </>
   )
