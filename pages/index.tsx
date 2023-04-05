@@ -20,6 +20,9 @@ export default function Home() {
           <Image 
           src={mainImage}
           fill
+          alt='image of neon lights of the words "Go up and never stop" over an upwards tilting arrow'
+          priority
+          className={styles.mainImage}
           />
         </div>
       </main>
