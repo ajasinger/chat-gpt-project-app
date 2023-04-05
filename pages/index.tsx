@@ -13,7 +13,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-
+        <h1>Motivate Me AI</h1>
+        <h2>powered by GPT-3</h2>
+        <div>Enter a topic and the AI will generate a motivational quote.</div>
       </main>
     </>
   )
