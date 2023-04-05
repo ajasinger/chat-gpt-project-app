@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import mainImage from '@/assets/images/fab-lentz-mRMQwK513hY-unsplash.jpg'
-import { Form } from 'react-bootstrap'
+import { Button, Form } from 'react-bootstrap'
 import { FormEvent } from 'react'
 
 export default function Home() {
@@ -33,6 +33,17 @@ export default function Home() {
           />
         </div>
         <Form onSubmit={handleSubmit} className={styles.inputForm}>
+          <Form.Group className='mb-3' controlId='prompt-input'>
+            <Form.Label>Create an inspiring quote...</Form.Label>
+            <Form.Control 
+            name='prompt'
+            placeholder='eg. success, romance, etc'
+            maxLength={100}
+            />
+          </Form.Group>
+          <Button type='submit' className='mb-3'>
+            Inspire me
+          </Button>
         </Form>
       </main>
     </>
