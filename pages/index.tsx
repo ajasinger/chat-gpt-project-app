@@ -12,7 +12,28 @@ export default function Home() {
   const [quoteLoadingError, setQuoteLoadingError] = useState(false);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const formData = new FormData(e.target as HTMLFormElement);
+    const prompt = formData.get("prompt")?.toString().trim();
 
+    if(prompt) {
+      try {
+        setQuote("");
+        setQuoteLoadingError(false);
+        setQuoteLoading(true);
+
+        //make request to server
+        const response = await fetch("/api/inspire?prompt=" + encodeURIComponent(prompt));
+        //get data from repsonse
+        const body = await response.json();
+        setQuote(body.quote);
+      } catch(error) {
+        console.log(error);
+        setQuoteLoadingError(true);
+      } finally {
+        setQuoteLoading(false);
+      }
+    }
   }
 
   return (
