@@ -50,6 +50,8 @@ export default function Home() {
           </Button>
         </Form>
         { quoteLoading && <Spinner animation='border' /> }
+        { quoteLoadingError && "Something went wrong. Please try again."}
+        { quote && <h5>{quote}</h5>}
       </main>
     </>
   )
