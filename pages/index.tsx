@@ -45,7 +45,7 @@ export default function Home() {
             maxLength={100}
             />
           </Form.Group>
-          <Button type='submit' className='mb-3'>
+          <Button type='submit' className='mb-3' disabled={quoteLoading}>
             Inspire me
           </Button>
         </Form>
