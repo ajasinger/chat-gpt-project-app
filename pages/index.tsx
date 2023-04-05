@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import mainImage from '@/assets/images/fab-lentz-mRMQwK513hY-unsplash.jpg'
-import { Button, Form } from 'react-bootstrap'
+import { Button, Form, Spinner } from 'react-bootstrap'
 import { FormEvent, useState } from 'react'
 
 export default function Home() {
@@ -49,6 +49,7 @@ export default function Home() {
             Inspire me
           </Button>
         </Form>
+        { quoteLoading && <Spinner animation='border' /> }
       </main>
     </>
   )
